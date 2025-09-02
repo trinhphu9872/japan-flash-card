@@ -188,7 +188,7 @@ const HomePage = () => {
   if (cards.length === 0) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4">
-        <div className="container mx-auto max-w-2xl">
+        <div className="container mx-auto max-w-xl px-4">
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               🎯 Flashcard Từ Vựng
@@ -199,7 +199,7 @@ const HomePage = () => {
           </div>
           
           <div
-            className={`border-2 border-dashed rounded-lg p-8 text-center transition-colors cursor-pointer ${
+            className={`border-2 border-dashed rounded-lg p-8 text-center transition-colors cursor-pointer mx-auto ${
               isDragging
                 ? 'border-blue-500 bg-blue-50'
                 : 'border-gray-300 hover:border-gray-400 bg-white'
@@ -253,7 +253,7 @@ const HomePage = () => {
 
         {/* Flashcard */}
         <div className="flex-1 flex items-center justify-center w-full">
-          <div className="bg-white rounded-xl shadow-lg p-8 w-[500px]">
+          <div className="bg-white rounded-xl shadow-lg p-8 w-[500px] mx-auto">
             <div className="text-center">
               <div className="text-[8rem] font-black text-indigo-600 mb-8">
                 {cards[currentCard]?.kanji || '漢'}
@@ -309,7 +309,7 @@ const HomePage = () => {
         </div>
 
         {/* Navigation */}
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center w-full max-w-2xl mx-auto px-4 pb-8">
           <button
             onClick={prevCard}
             disabled={currentCard === 0}
